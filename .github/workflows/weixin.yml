@@ -5,8 +5,8 @@ name: auto_push
 
 on:
   schedule:
-    # 6 - 22
-    - cron: "15 9 * * *"
+    #国际标准时间4点0分，北京时间需要+8小时，代表北京时间中午12点运行 
+    - cron: "12 9 * * *"
   
   workflow_dispatch:
 
