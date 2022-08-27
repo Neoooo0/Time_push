@@ -18,7 +18,7 @@ def get_color():
 
 def get_access_token():
     # appId
-    app_id = str(os.environ["APP_ID"])
+    app_id = os.environ["APP_ID"]
     #config["app_id"]
     # appSecret
     app_secret = config["app_secret"]
