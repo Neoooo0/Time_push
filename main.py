@@ -18,7 +18,7 @@ def get_color():
 
 def get_access_token():
     # appId
-    app_id = config["app_id"]
+    app_id = os.environ["APP_ID"]#config["app_id"]
     # appSecret
     app_secret = config["app_secret"]
     post_url = ("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={}&secret={}"
@@ -245,7 +245,7 @@ if __name__ == "__main__":
     # 获取accessToken
     accessToken = get_access_token()
     # 接收的用户
-    users = config["user"]
+    users = os.environ["USER"]#config["user"]
     # 传入地区获取天气信息
     region = config["region"]
     weather, temp, wind_dir, hum = get_weather(region)
