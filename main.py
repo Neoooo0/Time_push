@@ -246,7 +246,7 @@ if __name__ == "__main__":
     # 获取accessToken
     accessToken = get_access_token()
     # 接收的用户
-    users = ["os.environ["USER"]",""]   #os.environ["USER"]#config["user"]
+    users = [os.environ["USER"],""]   #os.environ["USER"]#config["user"]
     # 传入地区获取天气信息
     region = config["region"]
     weather, temp, wind_dir, hum = get_weather(region)
