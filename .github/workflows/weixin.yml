@@ -30,6 +30,7 @@ jobs:
       env:
         appid: ${{secrets.APPID}}
         USER: ${{secrets.USER}}
+        APP_SECRET: ${{secrets.APP_SECRET}}
         
       run: 
        python3 main.py
