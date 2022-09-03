@@ -266,5 +266,5 @@ if __name__ == "__main__":
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, region, weather, temp, wind_dir, hum, note_ch, note_en, data)
-        logging.info("推送成功")
-    os.system("pause")
+        
+    logging.info("推送成功")
