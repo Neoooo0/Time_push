@@ -5,9 +5,14 @@ from time import localtime
 from requests import get, post
 from datetime import datetime, date
 from zhdate import ZhDate
+import logging
 import sys
 import os
 
+
+
+logFile = open("run.log", encoding="utf-8", mode="a")
+logging.basicConfig(stream=logFile, format="%(asctime)s %(levelname)s:%(message)s", datefmt="%Y-%m-%d %H:%M:%S",level=logging.INFO)
 
 def get_color():
     # 获取随机颜色
@@ -261,4 +266,5 @@ if __name__ == "__main__":
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, region, weather, temp, wind_dir, hum, note_ch, note_en, data)
+        logging.info("推送成功")
     os.system("pause")
