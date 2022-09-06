@@ -145,7 +145,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, hu
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     year = localtime().tm_year
     month = localtime().tm_mon
-    day = localtime().tm_mday + 1 #服务器时间为UTC，部署时间8点之前，隔天需要+1
+    day = localtime().tm_mday #+ 1 #服务器时间为UTC，部署时间8点之前，隔天需要+1
     today = datetime.date(datetime(year=year, month=month, day=day))
     week = week_list[today.isoweekday() % 7]
     # 获取在一起的日子的日期格式
